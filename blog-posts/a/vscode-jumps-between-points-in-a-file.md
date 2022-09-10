@@ -8,56 +8,20 @@ series:
 canonical_url:
 ---
 
+This is an example of how to structure a blog post.
 
+The thing above delimited by `---` is called a "front matter" and it allows us to keep control over our article in a very easy way. Just edit it with your own data and CI will handle the rest to publish it to dev.to!
 
-# VSCode - How to Jumps between Points in a File
-# marson test
+You can also take advantage of [embedme](https://github.com/zakhenry/embedme) to extract your code from the markdown file and make sure that what you're displaying in the markdown is always up to date too e.g.
 
-This article contains tips to jumps between points (combination of line & column number) in a single file 
-in VSCode for screen reader users (blind, visuallly impaired, etc).
-This article is based on personal experience.
+```ts
+// code/demo-code.ts
 
-## Background
+interface A {
+  hello: string;
+}
+```
 
-I often face situation where I have to jumps from 1 point to another line back and forth in a single file. It is a bit challenging for me since now I am a screen reader user. 
+# Found a typo?
 
-As an example, in JSON file below I need to look for `sku`s in `products` to replace `sku` (xxx) in the `cart` array.  
-Imagine scenarios with much more products and more cart items.
-It will require me to traverse through the `products` for each `cart` item.
-
-{% embed https://gist.github.com/wiscer-org/48f2077ad3c3c2310a8006e5134db578 %}
-
-## Sighted Users
-This is how a sighted user will complete the task :
-1. Get the  `name` of the first `cart` item.
-2. Scroll to `products`.
-3. Traverse through the `products` until find the matching `name`.
-4. Remember the `sku`.
-5. Scroll back to the first item of `cart`.
-6. Replace `xxx` with the `sku`.
-7. Repeat from the beginning for the second item in `cart`.
-
-The steps above are pretty simple because a sighted user only need to scroll down/up without having to repeatedly press keys to navigate.
-
-## Screen Reader Users
-
-Screen reader (SC) users, on the other hand, do not use scrollable devices.
-They only use keyboards to give input to computer.
-SC users have to press key up / down to replace the 'scrolling' done by sighted users.
-During the navigation process, SC users have to press up/down key to move cursor 1 line to read each line until reaching the intended 'section'.
-It will require much longer time to complete simple task such as above, compared to sighted users.
-
-Below are tips I used to  workaround the challenge.
-Let's consider an initial condition for each tips
-where the cursor is at `"name" : "Milk"` (line 4).
-
-### Use `PgUp` and `PgDown` keys
-
-
-
-### Use line numbers
-
-### Find 'dummy' anchors
-
-### Use multiple editor.
-
+If you've found a typo, a sentence that could be improved or anything else that should be updated on this blog post, you can access it through a git repository and make a pull request. Instead of posting a comment, please go directly to <REPO URL> and open a new pull request with your changes.
